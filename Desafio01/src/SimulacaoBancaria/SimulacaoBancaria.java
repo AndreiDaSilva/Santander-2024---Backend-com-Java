@@ -1,6 +1,4 @@
 package SimulacaoBancaria;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SimulacaoBancaria {
@@ -10,25 +8,25 @@ public class SimulacaoBancaria {
 
     }
 
-    /**
-     * @return the saldo
-     */
     public double getSaldo() {
         return saldo;
     }
 
-    /**
-     * @param saldo the saldo to set
-     */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     private void addSaldo(double valor) {
-        try {
-            setSaldo(this.saldo += valor);
-        } catch (Exception e) {
-            System.out.println("Erro: " + e.getMessage());
+        setSaldo(this.saldo += valor);
+        System.out.println("Saldo atual: " + getSaldo());
+    }
+
+    private void sacarValor(double valor) {
+        if (getSaldo() < valor) {
+            System.out.println("Saldo insuficiente.");
+        } else {
+            setSaldo(this.saldo -= valor);
+            System.out.println("Saldo atual: " + getSaldo());
         }
     }
 
@@ -41,18 +39,13 @@ public class SimulacaoBancaria {
             opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
-                    try {
-                        conta.addSaldo(scanner.nextDouble());
-                    } catch (InputMismatchException e) {
-                        System.out.println("Por favor digite um numero");
-                    }
-                    System.out.println("Saldo atual: " + conta.getSaldo());
+                    conta.addSaldo(scanner.nextDouble());
                     break;
                 case 2:
-                    System.out.println("Saldo atual: ");
+                    conta.sacarValor(scanner.nextDouble());
                     break;
                 case 3:
-                    System.out.println("Saldo atual: ");
+                    System.out.println("Saldo atual: " + conta.getSaldo());
                     break;
                 case 0:
                     System.out.println("Programa encerrado.");
@@ -62,6 +55,6 @@ public class SimulacaoBancaria {
                     break;
             }
         }
+        scanner.close();
     }
-
 }
