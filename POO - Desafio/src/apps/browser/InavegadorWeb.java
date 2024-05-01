@@ -1,6 +1,6 @@
 package apps.browser;
 
-public interface NavegadorWeb {
+public interface InavegadorWeb {
     public void exibirPagina();
     public void addPagina();
     public void attPagina();

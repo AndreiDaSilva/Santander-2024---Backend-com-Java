@@ -1,6 +1,6 @@
 package apps.browser;
 
-public class Safari implements NavegadorWeb{
+public class Safari implements InavegadorWeb{
 
     @Override
     public void exibirPagina() {
