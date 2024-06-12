@@ -7,7 +7,7 @@ public class ListaTarefa {
     private List<Tarefa> tarefaList;
 
     /**
-     * @param tarefaList
+     * @param tarefaList-
      */
     public ListaTarefa() {
         this.tarefaList = new ArrayList<>();
@@ -34,4 +34,5 @@ public class ListaTarefa {
     public void obterDescricoesTarefas(){
         System.out.println(tarefaList);
     }
+    
 }
