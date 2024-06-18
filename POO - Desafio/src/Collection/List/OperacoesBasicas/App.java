@@ -1,4 +1,4 @@
-package List.OperacoesBasicas.ListTarefas;
+package List.OperacoesBasicas;
 
 public class App {
     public static void main(String[] args) {

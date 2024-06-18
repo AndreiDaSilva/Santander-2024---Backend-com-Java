@@ -1,4 +1,4 @@
-package List.Pesquisa.CatalogoLivros;
+package List.Pesquisa;
 
 public class App {
     public static void main(String[] args) {
