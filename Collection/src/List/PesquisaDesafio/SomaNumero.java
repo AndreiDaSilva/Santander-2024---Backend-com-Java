@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SomaNumero {
-    private List<Number> somaNumero;
+    private List<Integer> somaNumero;
 
     /**
      * @param somaNumero
@@ -19,7 +19,7 @@ public class SomaNumero {
 
     public int encontrarMaiorNumero() {
         int maiorNumero = Integer.MIN_VALUE;
-        for (Number n : somaNumero) {
+        for (Integer n : somaNumero) {
             if (n.intValue() > maiorNumero) {
                 maiorNumero = n.intValue();
             }
@@ -29,7 +29,7 @@ public class SomaNumero {
 
     public int encontrarMenorNumero(){
         int menorNumero = Integer.MAX_VALUE;
-        for (Number n : somaNumero) {
+        for (Integer n : somaNumero) {
             if (n.intValue() < menorNumero) {
                 menorNumero = n.intValue();
             }
@@ -44,7 +44,7 @@ public class SomaNumero {
     public int calcularSoma(){
         int somaTotalNumero = 0;
         if (!somaNumero.isEmpty()) {
-            for (Number n : somaNumero) {
+            for (Integer n : somaNumero) {
                 somaTotalNumero += n.intValue();     
             }
         }
