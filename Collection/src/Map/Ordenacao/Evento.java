@@ -1,7 +1,5 @@
 package Map.Ordenacao;
 
-import java.time.LocalDate;
-
 public class Evento {
     private String nome;
     private String descricao;
