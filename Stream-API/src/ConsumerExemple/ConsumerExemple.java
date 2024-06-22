@@ -1,27 +1,23 @@
-import java.lang.reflect.Array;
+package ConsumerExemple;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
-public class ConsumerExemplo {
+public class ConsumerExemple {
 
     public static void imprimirNumPar(List<Integer> numeros) {
         if (!numeros.isEmpty()) {
-            numeros.forEach(n -> {
-                if (n % 2 == 0) {
-                    System.out.print(n + " ");
-                }
-            });
+            numeros.stream()
+            .filter(n -> n % 2 == 0)
+            .forEach(System.out::print);
         }
     }
 
     public static void imprimirNumImpar(List<Integer> numeros) {
         if (!numeros.isEmpty()) {
-            numeros.forEach(n -> {
-                if (n % 2 != 0) {
-                    System.out.print(n + " ");
-                }
-            });
+            numeros.stream()
+            .filter(n -> n % 2 != 0)
+            .forEach(System.out::print);
         }
     }
 

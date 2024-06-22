@@ -1,7 +1,5 @@
 package PesquisaDesafio;
 
-import java.util.UUID;
-
 public class Tarefa {
     private String titulo;
     private String descricao;
