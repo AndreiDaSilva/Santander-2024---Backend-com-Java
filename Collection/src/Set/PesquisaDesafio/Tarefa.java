@@ -1,5 +1,9 @@
 package PesquisaDesafio;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb17352 (eliminado lixos no codigo)
 public class Tarefa {
     private String titulo;
     private String descricao;
